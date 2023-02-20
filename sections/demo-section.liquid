@@ -1,0 +1,36 @@
+<div class="main_wrap">
+  <h2>{{ section.settings.heading }}</h2>
+  <div class="description_box">
+    <img style="max-width:500px;" src="{{ section.settings.image | img_url:'master' }}" />
+    <p>{{ section.settings.content }}</p>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Demo Section",
+    "settings": [
+{
+"type":"text",
+"id":"heading",
+"label":"heading text"
+},
+{
+"type":"textarea",
+"id":"content",
+"label":"paragraph"
+
+}
+,{
+"type":"image_picker",
+"id":"image",
+"label":"image"
+}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

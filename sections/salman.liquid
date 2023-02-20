@@ -1,0 +1,43 @@
+<div class="custom-text-section">
+  <h2> {{ section.settings.custom_text_title }} </h2>
+  <div>{{ section.settings.custom_text_body }}</div>
+  <img src="{{ section.settings.image | img_url: '200x200' }}" />
+
+</div>
+
+{% schema %}
+  {
+    "name": "Text with image",
+    "settings": [
+      {
+        "id": "custom_text_title",
+        "type": "text",
+        "label": "Text box heading",
+        "default": "Title"
+      },
+      {
+        "id": "custom_text_body",
+        "type": "richtext",
+        "label": "Add custom text below",
+        "default": "<p>Add your text here</p>"
+      },
+         {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+         }
+    ], 
+    "presets": [
+      {
+        "name": "custom-text",
+        "category": "Custom"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

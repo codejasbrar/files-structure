@@ -1,0 +1,35 @@
+<div class="first">
+	<h1>Test by Manoj {{ section.settings.heading }}</h1>
+  	<p>{{ section.settings.content }}</p>
+  <img src="{{ section.settings.image | img_url: 'master' }}">
+</div>
+{% schema %}
+  {
+    "name": "Section Manoj",
+    "settings": [
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Heading Top"
+		},
+		
+		{
+			"type": "textarea",
+			"id": "content",
+			"label": "Bodytext"
+		},
+
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,7 @@
+development:
+  password: shptka_cacc1522c43ca4336a7d80223e030704
+  theme_id: "136114602211"
+  store: kofrajeans.myshopify.com
+  ignore_files:
+  - config/settings_data.json
+  - config/settings_schema.json

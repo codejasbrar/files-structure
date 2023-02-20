@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>{{ section.settings.heading }}</h1>
+      <h3 class="sub-head">{{ section.settings.sub-heading }} </h3>
+      <p class="content">{{ section.settings.description }}</p>
+    </div>
+    <div class="col-md-6">
+      <img src="{{ section.settings.image | img_url:'master' }}">
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+				{
+				"id"   : "heading",
+				"type" : "text",
+				"label": "Heading Text" 
+				},
+				{
+				"id"   : "sub-heading",
+				"type" : "text",
+				"label": "Sub Heading Text" 
+				},
+				{
+				"id"   : "description",
+				"type" : "textarea",
+				"label": "Description" 
+				},
+				{
+				"id"   : "image",
+				"type" : "image_picker",
+				"label": "Image" 
+				}
+				]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

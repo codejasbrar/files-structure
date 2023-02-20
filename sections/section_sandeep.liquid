@@ -1,0 +1,33 @@
+<div class="section1">
+  <h1>{{ section.settings.heading }}</h1>
+  <p>{{ section.settings.content }}</p>
+  <img src="{{ section.settings.image | img_url:'master' }}">
+</div>
+{% schema %}
+  {
+    "name": "Section testing_s",
+    "settings": [
+		{
+			"type": "text",
+ 			"id": "heading",
+			"label": "Heading text"
+		},
+		{
+			"type": "textarea",
+ 			"id": "content",
+			"label": "Paragraph"
+		},
+		{
+			"type": "image_picker",
+ 			"id": "image",
+			"label": "Image"
+		}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

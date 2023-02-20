@@ -1,0 +1,35 @@
+{{ 'karunesh_sample.css' | asset_url | stylesheet_tag }}
+
+
+<div class="test">
+  <h1>{{section.settings.title}}</h1>
+  <pre>{{ section.settings.description }}</pre>
+  <img src="{{ section.settings.image | img_url:'master' }}" width="200px" height="250px">
+</div>
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [{
+          "type":"text",
+          "id":"title",
+          "label":"Section Title"
+		},
+		{
+          "type":"textarea",
+          "id":"description",
+          "label":"Product Description"
+		},
+		{
+			"type":"image_picker",
+            "id":"image",
+            "label":"Product Image"
+        }
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

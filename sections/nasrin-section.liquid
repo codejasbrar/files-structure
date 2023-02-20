@@ -1,0 +1,37 @@
+<div class="first_div">
+  <h2> {{section.settings.heading}}</h2>
+  <img src="{{section.settings.image | img_url:"master"}}" width="350" height="200">
+  <p>{{section.settings.content}}</p>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Nasrin Section",
+    "settings": [
+	{
+	"type": "text",
+	"id":"heading",
+	"label": "Heading Text"
+	},
+	{
+	"type": "textarea",
+	"id":"content",
+	"label": "Content Text"
+	},
+	{
+	"type": "image_picker",
+	"id":"image",
+	"label": "Product Image"
+	}
+
+
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

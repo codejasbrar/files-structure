@@ -1,0 +1,48 @@
+{%for block in section.blocks %}
+<img src="{{block.settings.image | img_url:'master'}}" />
+{%endfor%}
+
+<h3>{{ section.settings.heading}}</h3>
+<p>{{ section.settings.description}}</p>
+{% schema %}
+  {
+    "name": "Icon with text",
+    "settings": [
+					{
+						"type": "text",
+						"label": "Your healine for this section",
+						"id":"heading"	
+					},
+					{
+						"type": "richtext",
+						"label": "Your description",
+						"id":"description"	
+					}
+				],
+	"blocks":[
+				{
+					"type":"image",
+					"name":"image block",
+					"settings":[
+                                  {
+                                    "type":"image_picker",
+                                    "label":"your image",
+                                    "id": "image"
+                                  }
+								]
+				}
+			],
+	"presets":[
+				{
+					"category": "image",
+					"name": "Icons with text"
+				}
+			]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

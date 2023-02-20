@@ -1,0 +1,34 @@
+{
+  "name": "shopera",
+  "version": "1.0.0",
+  "description": "Shopify Theme with Gulp and Webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "JB-Start": "gulp",
+    "JB-Deploy": "theme deploy --env=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codejasbrar/shopera.git"
+  },
+  "author": "Jaspinder Brar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codejasbrar/shopera/issues"
+  },
+  "homepage": "https://github.com/codejasbrar/shopera#readme",
+  "dependencies": {
+    "@shopify/themekit": "^1.1.9",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "ruby": "^0.6.1"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.57.1"
+  }
+}
